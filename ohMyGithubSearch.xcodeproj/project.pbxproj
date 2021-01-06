@@ -7,20 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3759C95259A51B300CFCD53 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3759C94259A51B300CFCD53 /* Kingfisher.framework */; };
+		B3759C96259A51B300CFCD53 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3759C94259A51B300CFCD53 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3759C9A25A5A11400CFCD53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3759C9925A5A11400CFCD53 /* LoginViewController.swift */; };
+		B3759C9E25A5A3DC00CFCD53 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3759C9D25A5A3DC00CFCD53 /* QueryService.swift */; };
 		B3F56BB6259A37CF0009F178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F56BB5259A37CF0009F178 /* AppDelegate.swift */; };
 		B3F56BB8259A37CF0009F178 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F56BB7259A37CF0009F178 /* SceneDelegate.swift */; };
-		B3F56BBA259A37CF0009F178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F56BB9259A37CF0009F178 /* ViewController.swift */; };
-		B3F56BBD259A37CF0009F178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F56BBB259A37CF0009F178 /* Main.storyboard */; };
+		B3F56BBA259A37CF0009F178 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F56BB9259A37CF0009F178 /* SearchViewController.swift */; };
 		B3F56BBF259A37D10009F178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F56BBE259A37D10009F178 /* Assets.xcassets */; };
 		B3F56BC2259A37D10009F178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F56BC0259A37D10009F178 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B3759C97259A51B300CFCD53 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3759C96259A51B300CFCD53 /* Kingfisher.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B3759C94259A51B300CFCD53 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		B3759C9925A5A11400CFCD53 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B3759C9D25A5A3DC00CFCD53 /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		B3F56BB2259A37CF0009F178 /* ohMyGithubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ohMyGithubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F56BB5259A37CF0009F178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F56BB7259A37CF0009F178 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3F56BB9259A37CF0009F178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3F56BBC259A37CF0009F178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3F56BB9259A37CF0009F178 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B3F56BBE259A37D10009F178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3F56BC1259A37D10009F178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3F56BC3259A37D10009F178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,17 +50,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3759C95259A51B300CFCD53 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3759C93259A51B300CFCD53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3759C94259A51B300CFCD53 /* Kingfisher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3759C9B25A5A3AD00CFCD53 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3759C9925A5A11400CFCD53 /* LoginViewController.swift */,
+				B3F56BB9259A37CF0009F178 /* SearchViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B3759C9C25A5A3CB00CFCD53 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B3759C9D25A5A3DC00CFCD53 /* QueryService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		B3F56BA9259A37CF0009F178 = {
 			isa = PBXGroup;
 			children = (
 				B3F56BB4259A37CF0009F178 /* ohMyGithubSearch */,
 				B3F56BB3259A37CF0009F178 /* Products */,
+				B3759C93259A51B300CFCD53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +102,10 @@
 		B3F56BB4259A37CF0009F178 /* ohMyGithubSearch */ = {
 			isa = PBXGroup;
 			children = (
+				B3759C9C25A5A3CB00CFCD53 /* Network */,
+				B3759C9B25A5A3AD00CFCD53 /* ViewControllers */,
 				B3F56BB5259A37CF0009F178 /* AppDelegate.swift */,
 				B3F56BB7259A37CF0009F178 /* SceneDelegate.swift */,
-				B3F56BB9259A37CF0009F178 /* ViewController.swift */,
-				B3F56BBB259A37CF0009F178 /* Main.storyboard */,
 				B3F56BBE259A37D10009F178 /* Assets.xcassets */,
 				B3F56BC0259A37D10009F178 /* LaunchScreen.storyboard */,
 				B3F56BC3259A37D10009F178 /* Info.plist */,
@@ -77,6 +123,8 @@
 				B3F56BAE259A37CF0009F178 /* Sources */,
 				B3F56BAF259A37CF0009F178 /* Frameworks */,
 				B3F56BB0259A37CF0009F178 /* Resources */,
+				B3759C97259A51B300CFCD53 /* Embed Frameworks */,
+				B3759C98259A51F500CFCD53 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -126,19 +174,40 @@
 			files = (
 				B3F56BC2259A37D10009F178 /* LaunchScreen.storyboard in Resources */,
 				B3F56BBF259A37D10009F178 /* Assets.xcassets in Resources */,
-				B3F56BBD259A37CF0009F178 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3759C98259A51F500CFCD53 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3F56BAE259A37CF0009F178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F56BBA259A37CF0009F178 /* ViewController.swift in Sources */,
+				B3F56BBA259A37CF0009F178 /* SearchViewController.swift in Sources */,
 				B3F56BB6259A37CF0009F178 /* AppDelegate.swift in Sources */,
+				B3759C9E25A5A3DC00CFCD53 /* QueryService.swift in Sources */,
+				B3759C9A25A5A11400CFCD53 /* LoginViewController.swift in Sources */,
 				B3F56BB8259A37CF0009F178 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +215,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B3F56BBB259A37CF0009F178 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3F56BBC259A37CF0009F178 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B3F56BC0259A37D10009F178 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,6 +349,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GDA7KJ7ZQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ohMyGithubSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -296,7 +361,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.malakhov.ilja.ohMyGithubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -307,6 +373,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7GDA7KJ7ZQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ohMyGithubSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,7 +385,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.malakhov.ilja.ohMyGithubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
