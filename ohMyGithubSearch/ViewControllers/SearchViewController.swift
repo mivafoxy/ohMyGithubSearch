@@ -40,7 +40,13 @@ class SearchViewController: UIViewController {
         }
         
         let dataTask = queryService.defaultSession.dataTask(with: request)
-        dataTask.resume()
+        //dataTask.resume()
+        
+        moveToSearchResults()
+    }
+    
+    fileprivate func moveToSearchResults() {
+        navigationController?.pushViewController(ReposTableViewController(), animated: true)
     }
     
     fileprivate func setupUI() {

@@ -16,6 +16,9 @@
 		B3F56BBA259A37CF0009F178 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F56BB9259A37CF0009F178 /* SearchViewController.swift */; };
 		B3F56BBF259A37D10009F178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F56BBE259A37D10009F178 /* Assets.xcassets */; };
 		B3F56BC2259A37D10009F178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F56BC0259A37D10009F178 /* LaunchScreen.storyboard */; };
+		B3FBC5B425A5C168006B2E35 /* ReposTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBC5B325A5C168006B2E35 /* ReposTableViewController.swift */; };
+		B3FBC5B625A5C268006B2E35 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBC5B525A5C268006B2E35 /* NetworkService.swift */; };
+		B3FBC5B825A73DF1006B2E35 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBC5B725A73DF1006B2E35 /* RepoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +46,9 @@
 		B3F56BBE259A37D10009F178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3F56BC1259A37D10009F178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3F56BC3259A37D10009F178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3FBC5B325A5C168006B2E35 /* ReposTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewController.swift; sourceTree = "<group>"; };
+		B3FBC5B525A5C268006B2E35 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B3FBC5B725A73DF1006B2E35 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,8 @@
 			children = (
 				B3759C9925A5A11400CFCD53 /* LoginViewController.swift */,
 				B3F56BB9259A37CF0009F178 /* SearchViewController.swift */,
+				B3FBC5B325A5C168006B2E35 /* ReposTableViewController.swift */,
+				B3FBC5B725A73DF1006B2E35 /* RepoTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -78,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B3759C9D25A5A3DC00CFCD53 /* QueryService.swift */,
+				B3FBC5B525A5C268006B2E35 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -207,8 +216,11 @@
 				B3F56BBA259A37CF0009F178 /* SearchViewController.swift in Sources */,
 				B3F56BB6259A37CF0009F178 /* AppDelegate.swift in Sources */,
 				B3759C9E25A5A3DC00CFCD53 /* QueryService.swift in Sources */,
+				B3FBC5B825A73DF1006B2E35 /* RepoTableViewCell.swift in Sources */,
 				B3759C9A25A5A11400CFCD53 /* LoginViewController.swift in Sources */,
 				B3F56BB8259A37CF0009F178 /* SceneDelegate.swift in Sources */,
+				B3FBC5B425A5C168006B2E35 /* ReposTableViewController.swift in Sources */,
+				B3FBC5B625A5C268006B2E35 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
