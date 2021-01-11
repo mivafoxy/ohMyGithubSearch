@@ -24,29 +24,52 @@ class SearchViewController: UIViewController {
     }
     
     @objc fileprivate func callToSearchRepository() {
-        let queryService = QueryService()
+        
+        searchButton.isUserInteractionEnabled = false
+        searchButton.setTitle("Loading...", for: .normal)
+        
+        let networkService = NetworkService()
         
         let repositoryName = repositoryNameField.text ?? ""
         let language = passwordField.text ?? ""
         let order = orderControl.selectedSegmentIndex == 0
         
-        guard let request =
-                queryService.searchRepository(
-                    repositoryName: repositoryName,
-                    language: language,
-                    ordered: order) else {
-            print("url request error")
-            return
+        let queue = DispatchQueue(label: String(describing: self))
+        let group = DispatchGroup()
+        
+        queue.async(group: group) {
+            
+            group.enter()
+            
+            networkService.callToSearchRepositories(
+                repositoryName: repositoryName,
+                language: language,
+                order: order) { (data) in
+                
+                let decoder = JSONDecoder()
+                
+                do {
+                    let repositories = try decoder.decode(ItemModel.self, from: data)
+                    
+                    DispatchQueue.main.async {
+                        let repoTableController = ReposTableViewController()
+                        repoTableController.repositories = repositories
+                        self.navigationController?.pushViewController(repoTableController, animated: true)
+                    }
+                } catch {
+                    print(error)
+                }
+                
+                group.leave()
+            }
         }
         
-        let dataTask = queryService.defaultSession.dataTask(with: request)
-        //dataTask.resume()
-        
-        moveToSearchResults()
-    }
-    
-    fileprivate func moveToSearchResults() {
-        navigationController?.pushViewController(ReposTableViewController(), animated: true)
+        group.notify(queue: queue) { () in
+            DispatchQueue.main.async {
+                self.searchButton.isUserInteractionEnabled = true
+                self.searchButton.setTitle("Search", for: .normal)
+            }
+        }
     }
     
     fileprivate func setupUI() {

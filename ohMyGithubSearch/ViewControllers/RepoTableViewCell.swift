@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RepoTableViewCell: UITableViewCell {
 
@@ -18,17 +19,21 @@ class RepoTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setupCell(authorName: String, userImageLink: String, repoName: String, repoDescription: String) {
-        self.authorName.text = authorName
+    public func setupCell(repository: RepositoryModel) {
+        self.authorName.text = repository.owner.login
         self.authorName.sizeToFit()
         
-        // Load image...
-        
-        self.repoName.text = repoName
+        self.repoName.text = repository.name
         self.repoName.sizeToFit()
         
-        self.repoDescription.text = repoDescription
+        self.repoDescription.text = repository.description
         self.repoDescription.sizeToFit()
+        
+        guard let url = repository.owner.avatar_url else {
+            return
+        }
+        
+        userImage.kf.setImage(with: URL(string: url))
     }
     
     fileprivate func setupUi() {
@@ -62,8 +67,8 @@ class RepoTableViewCell: UITableViewCell {
         userImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16.0).isActive = true
         userImage.widthAnchor.constraint(equalToConstant: self.frame.width / 6.0).isActive = true
         userImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8.0).isActive = true
-
-        userImage.backgroundColor = .red
+        
+        repoDescription.rightAnchor.constraint(equalTo: userImage.leftAnchor).isActive = true
     }
     
     fileprivate lazy var repoName: UILabel = {
@@ -77,6 +82,8 @@ class RepoTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 12.0)
+        label.numberOfLines = 2
+        label.lineBreakMode = .byTruncatingTail
         return label
     }()
     
@@ -90,7 +97,7 @@ class RepoTableViewCell: UITableViewCell {
     fileprivate lazy var userImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
         image.clipsToBounds = true
         
         return image
